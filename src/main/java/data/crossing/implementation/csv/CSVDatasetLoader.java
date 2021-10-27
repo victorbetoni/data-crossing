@@ -28,7 +28,6 @@ public class CSVDatasetLoader extends DatasetLoader {
         try(BufferedReader reader = new BufferedReader(new FileReader(file))) {
             String line;
             boolean first = true;
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
             while ((line = reader.readLine()) != null) {
                 if(first) {
                     attributes = Arrays.asList(line.split(";"));
